@@ -4,15 +4,15 @@ Online Course Service: Next.js backend API + React (Vite) frontend + MongoDB.
 
 ## Student Information
 
-- **Student Name:**
-- **Student ID:**
+- **Student Name:Than Kyaw Oo**
+- **Student ID:6540025**
 
 ## Links
 
 | | Repository | Deployed URL |
 |---|---|---|
-| Backend (Next.js) | _repo link_ | _https://your-backend.vercel.app_ |
-| Frontend (React) | _repo link_ | _https://your-frontend.vercel.app_ |
+| Backend (Next.js) | _repo link_ | https://final-exam-frontend.vercel.app/ |
+| Frontend (React) | _repo link_ | https://final-exam-backend.vercel.app/ |
 
 ## Test Credentials
 
