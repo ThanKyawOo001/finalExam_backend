@@ -11,8 +11,8 @@ Online Course Service: Next.js backend API + React (Vite) frontend + MongoDB.
 
 | | Repository | Deployed URL |
 |---|---|---|
-| Backend (Next.js) | _repo link_ | https://final-exam-frontend.vercel.app/ |
-| Frontend (React) | _repo link_ | https://final-exam-backend.vercel.app/ |
+| Backend (Next.js) | https://github.com/ThanKyawOo001/finalExam_backend | https://final-exam-frontend.vercel.app/ |
+| Frontend (React) | https://github.com/ThanKyawOo001/finalExam_frontend | https://final-exam-backend.vercel.app/ |
 
 ## Test Credentials
 
