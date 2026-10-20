@@ -11,18 +11,22 @@ import {
 const JWT_SECRET = process.env.JWT_SECRET;
 
 export function verifyJWT(req) {
-  try {
-    const token = req.cookies.get("token")?.value;
+  // httpOnly cookie first, "Authorization: Bearer <token>" as a fallback
+  // for browsers that block third-party cookies (Safari, Incognito)
+  const authHeader = req.headers.get("authorization") || "";
+  const candidates = [
+    req.cookies.get("token")?.value,
+    authHeader.startsWith("Bearer ") ? authHeader.slice(7) : null,
+  ].filter(Boolean);
 
-    if (!token) {
-      return null;
+  for (const token of candidates) {
+    try {
+      return jwt.verify(token, JWT_SECRET);
+    } catch (err) {
+      console.log(err.message);
     }
-    const decoded = jwt.verify(token, JWT_SECRET);
-    return decoded;
-  } catch (err) {
-    console.log(err);
-    return null;
   }
+  return null;
 }
 
 // Read the user that proxy.js attached to the request headers
@@ -44,3 +48,4 @@ export function isTeacher(user) {
 export function isStudent(user) {
   return user?.role === ROLE_STUDENT;
 }
+
